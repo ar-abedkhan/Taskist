@@ -1,15 +1,13 @@
-package com.example.taskist;
+package com.example.taskist.Activitys;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.taskist.R;
 import com.example.taskist.databinding.ActivityMainToDoBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainToDoActivity extends AppCompatActivity {
 

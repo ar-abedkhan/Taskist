@@ -1,14 +1,16 @@
-package com.example.taskist;
+package com.example.taskist.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainNoteActivity extends AppCompatActivity {
+import com.example.taskist.R;
+
+public class MainListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_note);
+        setContentView(R.layout.activity_main_list);
     }
 }

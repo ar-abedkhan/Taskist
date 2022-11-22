@@ -1,4 +1,4 @@
-package com.example.taskist;
+package com.example.taskist.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.taskist.R;
 import com.example.taskist.adapters.FragmentAdapter;
 import com.example.taskist.databinding.ActivityAllListBinding;
 
@@ -37,7 +38,6 @@ public class AllListActivity extends AppCompatActivity {
         binding.tablayout.getTabAt(7).setIcon(R.drawable.pin);
 
         binding.backBtn.setOnClickListener(view -> {
-            startActivity(new Intent(AllListActivity.this, MainToDoActivity.class));
             finish();
         });
 
@@ -46,7 +46,7 @@ public class AllListActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(AllListActivity.this,MainToDoActivity.class));
+        startActivity(new Intent(AllListActivity.this, MainToDoActivity.class));
         super.onBackPressed();
     }
 }
