@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    android:elevation="12dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lite_sky"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="12dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:text="This is Title"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:padding="5dp"
+                    android:id="@+id/todoCetagory"
+                    />
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@id/todoCetagory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="Work,Home,Health"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="17dp"
+                    android:id="@+id/todotitle"
+                    />
+
+
+
+                <ImageView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@android:drawable/star_on"
+                    android:id="@+id/todoPriority"
+                    android:paddingEnd="5dp"
+                    />
+
+
+
+                <ImageView
+                    app:layout_constraintTop_toBottomOf="@id/todotitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    android:id="@+id/todolocationimg"
+                    android:paddingEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_marginStart="3dp"
+                    app:layout_constraintTop_toBottomOf="@id/todotitle"
+                    app:layout_constraintStart_toEndOf="@id/todolocationimg"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:text="Location"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:id="@+id/todolocation"
+                    />
+
+                <Switch
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/todoPriority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:src="@drawable/shopping"
+                    android:text="UNDONE"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:id="@+id/todocetagoryimg"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/edittodo"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/edit"
+                    android:padding="@dimen/_2sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+
+
+
+
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
+
+
+            <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_access_time_24"
+                android:id="@+id/timeicon"
+                android:paddingEnd="5dp"
+                android:layout_marginStart="5dp"
+                />
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/timeicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09-33 PM"
+                android:id="@+id/startttime"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                android:padding="5dp"
+                />
+
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/startttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/dash"
+                android:padding="5dp"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dash"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="09-33 PM"
+                android:id="@+id/endingtime"
+                android:padding="5dp"
+                />
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_height="wrap_content"
+                android:text="Perticipants"
+                android:id="@+id/todostatus"
+                android:padding="5dp"
+                />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

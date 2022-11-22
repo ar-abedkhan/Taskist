@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainToDoActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sen_bold"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"/>
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:src="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bannerCard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:cardElevation="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_15sdp"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lite_sky"
+                >
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/berkshire_swash"
+                    android:text="Your Next Task"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/impTaskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="I have a Class"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@id/heading"
+                    />
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@id/impTaskTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/impTaskCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Work , Health , Shopping"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+
+                <TextView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/impTaskPriority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Priority: High"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_10ssp"
+                    />
+
+
+
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/impTaskCategory"
+                    android:id="@+id/impTaskStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 03:00 PM"
+                    android:padding="@dimen/_5sdp"
+                    android:fontFamily="@font/capriola"
+                    android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toEndOf="@id/impTaskStartTime"
+                    app:layout_constraintTop_toBottomOf="@id/impTaskCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="-"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/white"
+                    android:id="@+id/blank"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/impTaskEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/capriola"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="05:00 PM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toEndOf="@id/blank"
+                    app:layout_constraintTop_toBottomOf="@id/impTaskCategory" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/image1"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    />
+                <!--                        <TextView-->
+                <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                            app:layout_constraintBottom_toTopOf="@id/impTaskRemainTime"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:fontFamily="@font/baloo"-->
+                <!--                            android:text="Time Left"-->
+                <!--                            android:textColor="@color/white"-->
+                <!--                            android:textSize="@dimen/_12ssp" />-->
+                <!--                        <TextView-->
+                <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                            android:id="@+id/impTaskRemainTime"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:fontFamily="@font/baloo"-->
+                <!--                            android:textColor="@color/white"-->
+                <!--                            android:textSize="@dimen/_12ssp"-->
+                <!--                            android:text="2 H 30 M"-->
+                <!--                            />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bannerCard"
+                app:layout_constraintBottom_toTopOf="@id/fakeBottom"
+                >
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/countText"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Today you have 0 task to do : "
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/_2sdp"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/todayTaskRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/_2sdp"
+                    tools:listitem="@layout/todorecycler"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/countText"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/fakeBottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/lite_sky"
+        app:fabCradleRoundedCornerRadius="@dimen/_10sdp"
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lite_sky"
+            app:menu="@menu/bottom_menu"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:itemIconTint="@color/white"
+            app:itemIconSize="@dimen/_25sdp"
+            />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn"
+        android:src="@drawable/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bottomBar"
+        android:backgroundTint="@color/bottom_bar"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

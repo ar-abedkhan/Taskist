@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Taskist/app/src/main/res/drawable/add_btn_back.xml" value="0.2275" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/back.xml" value="0.2275" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/boeder.xml" value="0.2275" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/buttonback.xml" value="0.217" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/checkbox_back.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/edit_text_back.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/home.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.217" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/insert_btn_back.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/shopping.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/start_btn_back.xml" value="0.217" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/activity_all_list.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/activity_main_list.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/activity_main_to_do.xml" value="0.22735507246376813" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/activity_start.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/activity_to_do_add.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/activity_todo_view.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/fragment_edit.xml" value="0.22239583333333332" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/fragment_view.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/todorecycler.xml" value="0.23645833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
