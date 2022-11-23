@@ -19,6 +19,26 @@ public interface ToDoDao {
     @Delete
     void delete(ToDoModel toDoModel);
 
+
+    @Query("SELECT * FROM ToDoModel WHERE id ==:todoID")
+    List<ToDoModel> getToDoID(int todoID);
+
     @Query("SELECT * FROM ToDoModel")
     List<ToDoModel> getAllToDo();
+
+    @Query("SELECT * FROM ToDoModel WHERE date ==:today")
+    List<ToDoModel> getToDoToday(String today);
+
+    @Query("SELECT * FROM ToDoModel WHERE isDone ==:isDone")
+    List<ToDoModel> getToDoStatus(boolean isDone);
+
+    @Query("SELECT * FROM ToDoModel WHERE isPinned ==:pinned")
+    List<ToDoModel> getToDoPinned(boolean pinned);
+
+    @Query("SELECT * FROM ToDoModel WHERE priority ==:priority")
+    List<ToDoModel> getToDoByPriority(String priority);
+
+    @Query("SELECT * FROM ToDoModel WHERE startTime ==:time")
+    List<ToDoModel> getToDoByTime(String time);
+
 }
