@@ -76,12 +76,16 @@
                     android:textStyle="bold"
                     android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                     />
+
+
                 <EditText
                     android:id="@+id/todotitle"
                     android:layout_width="match_parent"
                     android:background="@drawable/boeder"
                     android:paddingTop="@dimen/_5sdp"
                     android:paddingBottom="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:paddingStart="@dimen/_8sdp"
                     android:hint="Title here"
                     android:layout_marginTop="@dimen/_8sdp"
@@ -89,9 +93,9 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:textColor="@color/text_color"
-                    android:layout_marginStart="@dimen/_25sdp"
                     android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                     />
+
 
 
                 <TextView
@@ -103,17 +107,7 @@
                     android:textStyle="bold"
                     android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                     />
-<!--                                -->
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Todo Description : "-->
-<!--                    android:layout_marginTop="@dimen/_15sdp"-->
-<!--                    android:textColor="@color/text_color"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"-->
-<!--                    />-->
-<!--                -->
+
 
 
                 <EditText
@@ -123,11 +117,13 @@
                     android:paddingBottom="@dimen/_5sdp"
                     android:paddingStart="@dimen/_8sdp"
                     android:paddingEnd="@dimen/_5sdp"
+                    android:gravity="start"
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:hint="Thats the description"
                     android:inputType="textMultiLine"
                     android:textColor="@color/text_color"
@@ -173,9 +169,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
                                 android:paddingBottom="@dimen/_8sdp"
-
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_5sdp"
                                 >
 
                                 <CheckBox

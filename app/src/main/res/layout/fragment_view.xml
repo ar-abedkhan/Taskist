@@ -41,14 +41,16 @@
             android:paddingBottom="@dimen/_150sdp"
             >
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Todo Title : "
-                android:textColor="@color/text_color"
-                android:textStyle="bold"
-                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Todo Title : "-->
+<!--                android:textColor="@color/text_color"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"-->
+<!--                />-->
+
+
             <TextView
                 android:id="@+id/todotitle"
                 android:layout_width="match_parent"
@@ -57,21 +59,33 @@
                 android:paddingBottom="@dimen/_5sdp"
                 android:paddingStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:paddingEnd="@dimen/_5sdp"                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_5sdp"
+                android:layout_height="wrap_content"
                 android:text="this is todos title"
                 android:textColor="@color/lite_sky"
-                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Todo Description : "
-                android:layout_marginTop="@dimen/_10sdp"
-                android:textColor="@color/text_color"
-                android:textStyle="bold"
-                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                />
+
+
+
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Todo Description : "-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:textColor="@color/text_color"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"-->
+<!--                />-->
+
+
+
+
+
+
             <TextView
                 android:id="@+id/tododiscription"
                 android:background="@drawable/boeder"
@@ -79,10 +93,13 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:paddingStart="@dimen/_8sdp"
                 android:paddingEnd="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_25sdp"
+                android:inputType="textMultiLine"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:text="Thats the description"
                 android:textColor="@color/lite_sky"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
@@ -92,29 +109,25 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:weightSum="2"
                 >
-                <androidx.cardview.widget.CardView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/_10sdp"
-                    android:layout_margin="@dimen/_5sdp"
-                    app:cardElevation="@dimen/_10sdp"
-                    >
+
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_6sdp"
                         >
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Priority :"
+                            android:text="Priority : "
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textColor="@color/text_color"
@@ -129,41 +142,27 @@
                             android:gravity="center"
                             android:textStyle="bold"
                             android:textColor="@android:color/holo_green_dark"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                             />
 
 
                     </LinearLayout>
 
 
-
-
-
-
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/_10sdp"
-                    app:cardElevation="@dimen/_10sdp"
-                    >
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:paddingTop="@dimen/_3sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:paddingBottom="@dimen/_6sdp"
                         >
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Status :"
+                            android:text="Status : "
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textColor="@color/text_color"
@@ -171,46 +170,29 @@
                             />
                         <TextView
                             android:paddingTop="@dimen/_5sdp"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="UNDONE"
                             android:id="@+id/todoStatus"
                             android:gravity="center"
                             android:textStyle="bold"
                             android:textColor="@android:color/holo_red_dark"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                             />
 
 
                     </LinearLayout>
 
-
-
-
-
-
-
-                </androidx.cardview.widget.CardView>
-
-
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardElevation="@dimen/_10sdp"
-                app:cardCornerRadius="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
 
-                >
                 <LinearLayout
                     android:padding="@dimen/_5sdp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     >
 
 <!--commiting-->
@@ -221,13 +203,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="ToDo Cetegory :"
-                        android:gravity="center"
                         />
 
 
                     <HorizontalScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -319,11 +301,6 @@
                 </LinearLayout>
 
 
-
-
-
-            </androidx.cardview.widget.CardView>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -339,6 +316,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_10sdp"
                     >
 
                     <ImageView
@@ -410,6 +388,7 @@
                     android:orientation="vertical"
                     android:layout_margin="@dimen/_5sdp"
                     android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_10sdp"
                     >
                     <TextView
                         android:layout_width="match_parent"
@@ -428,8 +407,6 @@
                         android:paddingTop="@dimen/_5sdp"
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:paddingStart="@dimen/_2sdp"
-                        android:paddingEnd="@dimen/_2sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="09-22 : PM"
@@ -463,9 +440,7 @@
                         android:layout_gravity="center"
                         android:paddingTop="@dimen/_5sdp"
                         android:paddingBottom="@dimen/_5sdp"
-                        android:paddingStart="@dimen/_2sdp"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_2sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="09-22 : PM"
@@ -486,6 +461,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Participate : "
+                android:layout_marginStart="@dimen/_10sdp"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                 android:textColor="@color/text_color"
                 android:textStyle="bold"
