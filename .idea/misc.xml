@@ -22,7 +22,10 @@
         <entry key="..\:/Taskist/app/src/main/res/layout/activity_start.xml" value="0.23645833333333333" />
         <entry key="..\:/Taskist/app/src/main/res/layout/activity_to_do_add.xml" value="0.23645833333333333" />
         <entry key="..\:/Taskist/app/src/main/res/layout/activity_todo_view.xml" value="0.23645833333333333" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/fragment_cetagory.xml" value="0.23645833333333333" />
         <entry key="..\:/Taskist/app/src/main/res/layout/fragment_edit.xml" value="0.22239583333333332" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/fragment_favourite.xml" value="0.22239583333333332" />
+        <entry key="..\:/Taskist/app/src/main/res/layout/fragment_status.xml" value="0.22239583333333332" />
         <entry key="..\:/Taskist/app/src/main/res/layout/fragment_view.xml" value="0.23645833333333333" />
         <entry key="..\:/Taskist/app/src/main/res/layout/todorecycler.xml" value="0.23645833333333333" />
       </map>
