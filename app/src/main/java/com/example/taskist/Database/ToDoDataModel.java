@@ -11,7 +11,7 @@ public class ToDoDataModel {
     int id;
 
     @ColumnInfo
-    private String title, description, startTime, endTime, date, participant, location, priority, catWork, catPersonal, catShopping, catHealth, catOthers;
+    private String title, description, startTime, endTime, date, participant, location, priority, categories;
 
     @ColumnInfo
     private boolean isDone;
