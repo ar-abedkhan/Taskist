@@ -29,7 +29,7 @@
             android:background="@color/lite_sky"
             android:paddingBottom="@dimen/_1sdp"
             app:tabIconTint="@color/tab_color"
-            app:tabSelectedTextColor="@color/black"
+            app:tabSelectedTextColor="@color/white"
             app:tabTextColor="@color/off_white"
 
             />
