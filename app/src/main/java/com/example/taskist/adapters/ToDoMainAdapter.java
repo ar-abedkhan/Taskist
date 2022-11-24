@@ -1,6 +1,7 @@
 package com.example.taskist.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,24 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ToDoMainViewHolder holder, int position) {
+        ToDoModel model = toDoList.get(position);
+
+        holder.title.setText(model.getTitle());
+        holder.categories.setText(model.getParticipant());
+        holder.participant.setText(model.getParticipant());
+        holder.location.setText(model.getLocation());
+        holder.startTime.setText(model.getStartTime());
+        holder.endTime.setText(model.getEndTime());
+        holder.status.setChecked(model.isDone());
+
+//        holder.priorityImg;
+        holder.editTodoImg.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.putExtra("taskID", String.valueOf(model.getId()));
+            context.startActivity(intent);
+        });
+
+
 
     }
 

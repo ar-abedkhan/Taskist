@@ -12,9 +12,9 @@ import com.example.taskist.R;
 
 public class ToDoMainViewHolder extends RecyclerView.ViewHolder {
 
-    Switch status;
-    ImageView priorityImg, editTodoImg;
-    TextView title, categories, startTime, endTime, location, participant;
+    public Switch status;
+    public ImageView priorityImg, editTodoImg;
+    public TextView title, categories, startTime, endTime, location, participant;
 
     public ToDoMainViewHolder(@NonNull View itemView) {
         super(itemView);
