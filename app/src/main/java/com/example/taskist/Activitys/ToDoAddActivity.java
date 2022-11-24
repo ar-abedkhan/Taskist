@@ -10,13 +10,16 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 
+import com.example.taskist.Database.ToDoDatabase;
+import com.example.taskist.Database.ToDoModel;
 import com.example.taskist.R;
 import com.example.taskist.databinding.ActivityToDoAddBinding;
 
 public class ToDoAddActivity extends AppCompatActivity {
 
     ActivityToDoAddBinding binding;
-
+    String msg="";
+    String Priority;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,10 +41,10 @@ public class ToDoAddActivity extends AppCompatActivity {
             }
         });
 
-        //done by rafi
 
         binding.insertBtn.setOnClickListener(view -> {
             Collectdatafromuser();
+            Log.i("TAG", "onCreate: "+msg);
         });
 
 
@@ -51,9 +54,20 @@ public class ToDoAddActivity extends AppCompatActivity {
         String Title = binding.insertTaskTitle.getText().toString();
         checkbox();
         radiogroup();
-      String participant=  binding.participantEditText.getText().toString();
-      String location=  binding.locationEditText.getText().toString();
-      String Desctiption=  binding.insertTaskDesctiption.getText().toString();
+        String participant=  binding.participantEditText.getText().toString();
+        String location=  binding.locationEditText.getText().toString();
+        String Desctiption=  binding.insertTaskDesctiption.getText().toString();
+
+//        ToDoModel note =new ToDoModel();
+//        note.setTitle(Title);
+//        note.setCategories(msg);
+//        note.setPriority(Priority);
+//        note.setParticipant(participant);
+//        note.setLocation(location);
+//        note.setDescription(Desctiption);
+//        ToDoDatabase.getInstance(this).getToDoDao().insert(note);
+
+
     }
 
     private void radiogroup() {
@@ -63,22 +77,22 @@ public class ToDoAddActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
                     case R.id.radio0:
-                   String High= binding.radio0.getText().toString();
+                        Priority=  binding.radio0.getText().toString();
                         break;
                     case R.id.radio1:
-                        String Medium= binding.radio0.getText().toString();
-
+                        Priority= binding.radio0.getText().toString();
                         break;
                     case R.id.radio2:
-                        String Low= binding.radio0.getText().toString();
+                        Priority= binding.radio0.getText().toString();
                         break;
                 }
+
             }
+
         });
     }
 
     private void checkbox() {
-        String msg="";
         if(binding.wrokcheckbox.isChecked()){
             msg = msg + " Wrok ";
         }
@@ -91,7 +105,5 @@ public class ToDoAddActivity extends AppCompatActivity {
         if(binding.healthcheckbox.isChecked()){
             msg = msg + " Health ";
         }
-        Log.i("TAG", "checkbox: "+msg);
-
     }
 }
