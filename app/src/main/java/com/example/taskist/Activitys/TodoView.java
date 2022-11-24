@@ -21,7 +21,9 @@ ActivityTodoViewBinding binding;
         binding=ActivityTodoViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+/*
+* Fragment manager has 2 fragments
+* First one is View Fragment and the Second one is Edit Fragment*/
     fragmentManager=getSupportFragmentManager();
     fragmentAdapter=new FragmenteditviewAdapter(fragmentManager,101);
     binding.viewpager.setAdapter(fragmentAdapter);

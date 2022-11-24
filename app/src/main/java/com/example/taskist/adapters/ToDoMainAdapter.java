@@ -53,7 +53,7 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
 
         holder.editTodoImg.setOnClickListener(view -> {
             Intent intent = new Intent(context, TodoView.class);
-            intent.putExtra("taskID", String.valueOf(model.getId()));
+            intent.putExtra("taskID", model.getId());
             context.startActivity(intent);
         });
 

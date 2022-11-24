@@ -212,13 +212,14 @@
                         android:layout_marginStart="@dimen/_5sdp">
 
                         <LinearLayout
+                            android:id="@+id/todoAllCategory"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal"
                             android:padding="@dimen/_5sdp">
 
                             <TextView
-                                android:id="@+id/wordCetagory"
+                                android:id="@+id/workCategory"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Work"
@@ -330,17 +331,16 @@
                         />
 
                     <TextView
-                        android:layout_marginStart="3dp"
-                        app:layout_constraintTop_toBottomOf="@id/todotitle"
-                        app:layout_constraintStart_toEndOf="@id/todolocationimg"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/holo_blue_dark"
-                        android:text="Location"
-                        android:textStyle="bold"
-                        android:textSize="20dp"
                         android:id="@+id/todolocation"
-                        />
+                        android:layout_width="252dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:text="Location"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/todolocationimg"
+                        app:layout_constraintTop_toBottomOf="@id/todotitle" />
                 </LinearLayout>
 
 
@@ -468,24 +468,22 @@
                 />
 
 
-
             <TextView
+                android:id="@+id/participantName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Participate Name"
-                android:background="@drawable/boeder"
-                android:textColor="@color/lite_sky"
-                android:paddingStart="@dimen/_10sdp"
-                android:paddingEnd="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:paddingTop="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_5sdp"
-                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:textSize="@dimen/_16sdp"
-                android:id="@+id/participateName"
-                />
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/boeder"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="Participants Name"
+                android:textColor="@color/lite_sky"
+                android:textSize="@dimen/_16sdp" />
 
 
 
