@@ -233,7 +233,7 @@
                             >
 
                             <RadioButton
-                                android:id="@+id/radio0"
+                                android:id="@+id/radioHigh"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_5sdp"
@@ -246,7 +246,7 @@
                                 android:textSize="@dimen/_11ssp" />
 
                             <RadioButton
-                                android:id="@+id/radio1"
+                                android:id="@+id/radioMedium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_5sdp"
@@ -259,7 +259,7 @@
                                 android:textSize="@dimen/_11ssp" />
 
                             <RadioButton
-                                android:id="@+id/radio2"
+                                android:id="@+id/radioLow"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_5sdp"

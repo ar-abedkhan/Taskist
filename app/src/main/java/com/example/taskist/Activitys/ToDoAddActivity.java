@@ -76,14 +76,14 @@ public class ToDoAddActivity extends AppCompatActivity {
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
-                    case R.id.radio0:
-                        Priority=  binding.radio0.getText().toString();
+                    case R.id.radioLow:
+                        Priority=  binding.radioLow.getText().toString();
                         break;
-                    case R.id.radio1:
-                        Priority= binding.radio0.getText().toString();
+                    case R.id.radioMedium:
+                        Priority= binding.radioMedium.getText().toString();
                         break;
-                    case R.id.radio2:
-                        Priority= binding.radio0.getText().toString();
+                    case R.id.radioHigh:
+                        Priority= binding.radioHigh.getText().toString();
                         break;
                 }
 
@@ -94,7 +94,7 @@ public class ToDoAddActivity extends AppCompatActivity {
 
     private void checkbox() {
         if(binding.wrokcheckbox.isChecked()){
-            msg = msg + " Wrok ";
+            msg = msg + " Work ";
         }
         if(binding.personalcheckbox.isChecked()){
             msg = msg + " Personal ";
