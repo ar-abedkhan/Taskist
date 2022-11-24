@@ -40,13 +40,13 @@
                     android:singleLine="true"
                     android:ellipsize="marquee"
                     android:textStyle="bold"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:padding="5dp"
-                    android:id="@+id/todoCetagory"
+                    android:id="@+id/todoTitle"
                     />
 
                 <TextView
-                    app:layout_constraintTop_toBottomOf="@id/todoCetagory"
+                    app:layout_constraintTop_toBottomOf="@id/todoTitle"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -55,8 +55,8 @@
                     android:text="Work,Home,Health"
                     android:layout_marginStart="5dp"
                     android:textColor="@color/text_color"
-                    android:textSize="17dp"
-                    android:id="@+id/todotitle"
+                    android:textSize="17sp"
+                    android:id="@+id/todoCategories"
                     />
 
 
@@ -74,7 +74,7 @@
 
 
                 <ImageView
-                    app:layout_constraintTop_toBottomOf="@id/todotitle"
+                    app:layout_constraintTop_toBottomOf="@id/todoCategories"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -85,14 +85,14 @@
 
                 <TextView
                     android:layout_marginStart="3dp"
-                    app:layout_constraintTop_toBottomOf="@id/todotitle"
+                    app:layout_constraintTop_toBottomOf="@id/todoCategories"
                     app:layout_constraintStart_toEndOf="@id/todolocationimg"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/holo_blue_dark"
                     android:text="Location"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:id="@+id/todolocation"
                     />
 
@@ -106,7 +106,7 @@
                     android:textStyle="bold"
                     android:layout_marginEnd="@dimen/_25sdp"
                     android:textColor="@android:color/holo_green_dark"
-                    android:id="@+id/todocetagoryimg"
+                    android:id="@+id/todoStatus"
                     />
 
 
@@ -119,17 +119,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     />
-
-
-
-
-
-
-
-
-
-
-
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -162,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="09-33 PM"
-                android:id="@+id/startttime"
+                android:id="@+id/starttime"
                 android:textStyle="bold"
                 android:textColor="@color/text_color"
                 android:padding="5dp"
@@ -171,7 +160,7 @@
 
             <TextView
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/startttime"
+                app:layout_constraintStart_toEndOf="@id/starttime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
@@ -201,8 +190,8 @@
                 android:textStyle="bold"
                 android:textSize="17dp"
                 android:layout_height="wrap_content"
-                android:text="Perticipants"
-                android:id="@+id/todostatus"
+                android:text="Participants"
+                android:id="@+id/todoParticipants"
                 android:padding="5dp"
                 />
 
