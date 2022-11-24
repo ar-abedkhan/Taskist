@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.taskist.Activitys.TodoView;
 import com.example.taskist.Database.ToDoModel;
 import com.example.taskist.Listeners.ToDoMainListener;
 import com.example.taskist.R;
@@ -46,9 +47,12 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
         holder.endTime.setText(model.getEndTime());
         holder.status.setChecked(model.isDone());
 
-//        holder.priorityImg;
+        if (model.getPriority().equals("High")){holder.priorityImg.setImageResource(R.drawable.priority_high_icon);}
+        else if (model.getPriority().equals("Medium")){holder.priorityImg.setImageResource(R.drawable.priority_medium_icon);}
+        else {holder.priorityImg.setImageResource(R.drawable.priority_normal_icon);}
+
         holder.editTodoImg.setOnClickListener(view -> {
-            Intent intent = new Intent();
+            Intent intent = new Intent(context, TodoView.class);
             intent.putExtra("taskID", String.valueOf(model.getId()));
             context.startActivity(intent);
         });

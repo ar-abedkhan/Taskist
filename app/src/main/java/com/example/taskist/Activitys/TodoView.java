@@ -1,10 +1,11 @@
-package com.example.taskist;
+package com.example.taskist.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
+import com.example.taskist.R;
 import com.example.taskist.adapters.FragmenteditviewAdapter;
 import com.example.taskist.databinding.ActivityTodoViewBinding;
 

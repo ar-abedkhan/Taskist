@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.taskist.TodoView;
-import com.example.taskist.databinding.ActivityMainBinding;
-
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
