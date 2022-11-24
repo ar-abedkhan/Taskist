@@ -6,12 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 
-import com.example.taskist.Database.ToDoDatabase;
-import com.example.taskist.Database.ToDoModel;
 import com.example.taskist.R;
 import com.example.taskist.databinding.ActivityToDoAddBinding;
 
@@ -30,7 +27,7 @@ public class ToDoAddActivity extends AppCompatActivity {
             finish();
         });
 
-        binding.otherCateCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        binding.other.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b==true){
@@ -44,7 +41,6 @@ public class ToDoAddActivity extends AppCompatActivity {
 
         binding.insertBtn.setOnClickListener(view -> {
             Collectdatafromuser();
-            Log.i("TAG", "onCreate: "+msg);
         });
 
 
@@ -76,14 +72,14 @@ public class ToDoAddActivity extends AppCompatActivity {
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
-                    case R.id.radio0:
-                        Priority=  binding.radio0.getText().toString();
+                    case R.id.High:
+                        Priority=  binding.High.getText().toString();
                         break;
-                    case R.id.radio1:
-                        Priority= binding.radio0.getText().toString();
+                    case R.id.Medium:
+                        Priority= binding.Medium.getText().toString();
                         break;
-                    case R.id.radio2:
-                        Priority= binding.radio0.getText().toString();
+                    case R.id.Low:
+                        Priority= binding.Low.getText().toString();
                         break;
                 }
 
@@ -94,16 +90,20 @@ public class ToDoAddActivity extends AppCompatActivity {
 
     private void checkbox() {
         if(binding.wrokcheckbox.isChecked()){
-            msg = msg + " Wrok ";
+            msg = msg + " Wrok,";
         }
         if(binding.personalcheckbox.isChecked()){
-            msg = msg + " Personal ";
+            msg = msg + " Personal,";
         }
         if(binding.shoppingcheckbox.isChecked()){
-            msg = msg + " Shopping ";
+            msg = msg + " Shopping,";
         }
         if(binding.healthcheckbox.isChecked()){
-            msg = msg + " Health ";
+            msg = msg + " Health,";
+        }
+        if(binding.other.isChecked()){
+            //get data from custom category text view
+            msg = msg + binding.otherCateField.getText().toString().trim();
         }
     }
 }
