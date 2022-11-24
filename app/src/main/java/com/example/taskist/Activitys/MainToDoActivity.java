@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.taskist.Listeners.ToDoMainListener;
 import com.example.taskist.R;
 import com.example.taskist.databinding.ActivityMainToDoBinding;
 
-public class MainToDoActivity extends AppCompatActivity {
+public class MainToDoActivity extends AppCompatActivity implements ToDoMainListener {
 
     ActivityMainToDoBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,10 @@ public class MainToDoActivity extends AppCompatActivity {
         binding = ActivityMainToDoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+        setDataToAdapter();
+
+//---------------------------- ALl Buttons Actions --------------------------
         binding.backBtn.setOnClickListener(view -> {
             startActivity(new Intent(MainToDoActivity.this, MainActivity.class));
             finish();
@@ -43,5 +49,14 @@ public class MainToDoActivity extends AppCompatActivity {
             }
             return true;
         });
+    }
+
+//    ---------------- setDataToAdapter is mainly created to set data to the adapter -------------
+    private void setDataToAdapter() {
+    }
+
+    @Override
+    public void screenRefresher() {
+
     }
 }
