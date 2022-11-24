@@ -39,7 +39,7 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
         ToDoModel model = toDoList.get(position);
 
         holder.title.setText(model.getTitle());
-        holder.categories.setText(model.getParticipant());
+        holder.categories.setText(model.getCategories());
         holder.participant.setText(model.getParticipant());
         holder.location.setText(model.getLocation());
         holder.startTime.setText(model.getStartTime());

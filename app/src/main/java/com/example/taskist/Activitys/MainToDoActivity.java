@@ -1,13 +1,16 @@
 package com.example.taskist.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.taskist.Database.ToDoDatabase;
 import com.example.taskist.Listeners.ToDoMainListener;
 import com.example.taskist.R;
+import com.example.taskist.adapters.ToDoMainAdapter;
 import com.example.taskist.databinding.ActivityMainToDoBinding;
 
 public class MainToDoActivity extends AppCompatActivity implements ToDoMainListener {
@@ -53,6 +56,11 @@ public class MainToDoActivity extends AppCompatActivity implements ToDoMainListe
 
 //    ---------------- setDataToAdapter is mainly created to set data to the adapter -------------
     private void setDataToAdapter() {
+        ToDoMainAdapter adapter = new ToDoMainAdapter(this, ToDoDatabase.getInstance(this).getToDoDao().getAllToDo(), MainToDoActivity.this);
+        binding.countText.setText("Today you have " +adapter.getItemCount()+" task to do ");
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        binding.todayTaskRecycler.setLayoutManager(linearLayoutManager);
+        binding.todayTaskRecycler.setAdapter(adapter);
     }
 
     @Override
