@@ -13,7 +13,6 @@ import com.example.taskist.R;
 import com.example.taskist.adapters.CetagoryAdapter;
 import com.example.taskist.databinding.FragmentCetagoryBinding;
 
-
 public class CetagoryFragment extends Fragment {
 
 
@@ -37,11 +36,13 @@ private FragmentCetagoryBinding binding;
                 binding.cetagoryTabLayout.setupWithViewPager(binding.cetagoryViewpager);
 
 
-        binding.cetagoryTabLayout.getTabAt(0).setIcon(R.drawable.health2);
-        binding.cetagoryTabLayout.getTabAt(1).setIcon(R.drawable.shopping);
-        binding.cetagoryTabLayout.getTabAt(2).setIcon(R.drawable.work);
-        binding.cetagoryTabLayout.getTabAt(1).setIcon(R.drawable.personal);
-        binding.cetagoryTabLayout.getTabAt(4).setIcon(R.drawable.ic_baseline_more_24);
+//        binding.cetagoryTabLayout.getTabAt(0).setIcon(R.drawable.health2);
+//        binding.cetagoryTabLayout.getTabAt(1).setIcon(R.drawable.shopping);
+//        binding.cetagoryTabLayout.getTabAt(2).setIcon(R.drawable.work);
+//        binding.cetagoryTabLayout.getTabAt(3).setIcon(R.drawable.personal);
+//        binding.cetagoryTabLayout.getTabAt(4).setIcon(R.drawable.ic_baseline_more_24);
+
+
 
         return binding.getRoot();
     }

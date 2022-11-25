@@ -6,20 +6,23 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.taskist.fragments.CetagoryFragment;
 import com.example.taskist.fragments.DoneFragment;
 import com.example.taskist.fragments.EditFragment;
+import com.example.taskist.fragments.FavouriteFragment;
 import com.example.taskist.fragments.HealthFragment;
 import com.example.taskist.fragments.NotDoneFragment;
 import com.example.taskist.fragments.OtherFragment;
 import com.example.taskist.fragments.PersonalFragment;
 import com.example.taskist.fragments.PinFragment;
 import com.example.taskist.fragments.ShoppingFragment;
+import com.example.taskist.fragments.StatusFragment;
 import com.example.taskist.fragments.ViewFragment;
 import com.example.taskist.fragments.WorkFragment;
 
 public class FragmentAdapter extends FragmentPagerAdapter {
 
-    String[] name = {"Work", "Personal", "Shopping", "Health", "Other", "Done", "Not Done", "Pin"};
+    String[] name = {"Category","Status","Favourite"};
 
     public FragmentAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
@@ -32,21 +35,11 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         switch (position){
 
             case 0:
-                return new WorkFragment();
+                return new CetagoryFragment();
             case 1:
-                return new PersonalFragment();
+                return new StatusFragment();
             case 2:
-                return new ShoppingFragment();
-            case 3:
-                return new HealthFragment();
-            case 4:
-                return new OtherFragment();
-            case 5:
-                return new DoneFragment();
-            case 6:
-                return new NotDoneFragment();
-            case 7:
-                return new PinFragment();
+                return new FavouriteFragment();
 
         }
 
