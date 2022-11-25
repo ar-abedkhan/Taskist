@@ -14,7 +14,7 @@ public class ToDoMainViewHolder extends RecyclerView.ViewHolder {
 
     public Switch status;
     public ImageView priorityImg, editTodoImg;
-    public TextView title, categories, startTime, endTime, location, participant;
+    public TextView title, categories, startTime, endTime, location, participant,startdate, enddate;
 
     public ToDoMainViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -24,11 +24,15 @@ public class ToDoMainViewHolder extends RecyclerView.ViewHolder {
         location = itemView.findViewById(R.id.todolocation);
         startTime = itemView.findViewById(R.id.starttime);
         endTime = itemView.findViewById(R.id.endingtime);
+        endTime = itemView.findViewById(R.id.endingtime);
+        endTime = itemView.findViewById(R.id.endingtime);
         participant = itemView.findViewById(R.id.todoParticipants);
+        startdate = itemView.findViewById(R.id.startDateTV);
+        enddate = itemView.findViewById(R.id.endDateTV);
 
 
         status = itemView.findViewById(R.id.todoStatus);
-        priorityImg = itemView.findViewById(R.id.todoPriority);
+        priorityImg = itemView.findViewById(R.id.todoPriorityimg);
         editTodoImg = itemView.findViewById(R.id.edittodo);
     }
 }

@@ -67,7 +67,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@android:drawable/star_on"
-                    android:id="@+id/todoPriority"
+                    android:id="@+id/todoPriorityimg"
                     android:paddingEnd="5dp"
                     />
 
@@ -98,7 +98,7 @@
 
                 <Switch
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/todoPriority"
+                    app:layout_constraintEnd_toStartOf="@id/todoPriorityimg"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:src="@drawable/shopping"
