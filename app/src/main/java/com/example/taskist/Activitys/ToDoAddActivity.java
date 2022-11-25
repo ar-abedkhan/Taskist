@@ -36,7 +36,7 @@ public class ToDoAddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityToDoAddBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        cal = Calendar.getInstance();
         binding.backBtn.setOnClickListener(view -> {
             startActivity(new Intent(ToDoAddActivity.this, MainToDoActivity.class));
             finish();
@@ -56,10 +56,13 @@ public class ToDoAddActivity extends AppCompatActivity {
         binding.participantAddBtn.setOnClickListener(view -> {
             participant=  binding.participantEditText.getText().toString();
         });
+
         Starttime();
         Endtime();
         Startdate();
         Enddate();
+
+        //insert btn
         binding.insertBtn.setOnClickListener(view -> {
             if (validateFields()){
                 Collectdatafromuser();
@@ -68,37 +71,11 @@ public class ToDoAddActivity extends AppCompatActivity {
                 finish();
             }
 
-
         });
 
 
     }
-    private void Startdate() {
-        binding.startDateTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calendar = Calendar.getInstance();
-                year = calendar.get(Calendar.YEAR);
-                month = calendar.get(Calendar.MONTH);
-                day = calendar.get(Calendar.DAY_OF_MONTH);
-                DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        ToDoAddActivity.this,
-                        new DatePickerDialog.OnDateSetListener() {
-                            @Override
-                            public void onDateSet(DatePicker view, int year,
-                                                  int monthOfYear, int dayOfMonth) {
-                                binding.startDateTV.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
-                            }
-                        },
-                        year, month, day);
-                datePickerDialog.show();
-            }
-        });
-    }
-    private void Enddate() {
-
-    }
 
     //Checking all the data filled by the user
     public boolean validateFields() {
@@ -125,7 +102,8 @@ public class ToDoAddActivity extends AppCompatActivity {
         radiogroup();
         String Start_time=binding.startTimeTV.getText().toString();
         String end_time=binding.endTimeTV.getText().toString();
-        String Start_date=binding.startDateTV.getText().toString();
+        String Start_date=binding.startDate.getText().toString();
+        String end_date=binding.endDateTV.getText().toString();
         String location=  binding.locationEditText.getText().toString();
         String Desctiption=  binding.insertTaskDesctiption.getText().toString();
 
@@ -137,6 +115,7 @@ public class ToDoAddActivity extends AppCompatActivity {
         note.setStartTime(Start_time);
         note.setEndTime(end_time);
         note.setStartdate(Start_date);
+        note.setEnddate(end_date);
         note.setParticipant(participant);
         note.setLocation(location);
         note.setDescription(Desctiption);
@@ -171,7 +150,6 @@ public class ToDoAddActivity extends AppCompatActivity {
 
         });
     }
-
     private void checkbox() {
         if(binding.wrokcheckbox.isChecked()){
             msg = msg + " Wrok,";
@@ -194,7 +172,6 @@ public class ToDoAddActivity extends AppCompatActivity {
     public void Starttime(){
 
         binding.startTimeTV.setOnClickListener(view -> {
-            cal = Calendar.getInstance();
             mHour = cal.get(Calendar.HOUR_OF_DAY);
             mMinute = cal.get(Calendar.MINUTE);
 
@@ -212,7 +189,6 @@ public class ToDoAddActivity extends AppCompatActivity {
     }
     private void Endtime() {
         binding.endTimeTV.setOnClickListener(view -> {
-            cal = Calendar.getInstance();
             mHour = cal.get(Calendar.HOUR_OF_DAY);
             mMinute = cal.get(Calendar.MINUTE);
 
@@ -228,6 +204,48 @@ public class ToDoAddActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    private void Startdate() {
+        binding.startDate.setOnClickListener(v -> {
+
+            year = cal.get(Calendar.YEAR);
+            month = cal.get(Calendar.MONTH);
+            day = cal.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    ToDoAddActivity.this,
+                    new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+                            binding.startDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    },
+                    year, month, day);
+            datePickerDialog.show();
+        });
+    }
+
+    private void Enddate() {
+        binding.endDateTV.setOnClickListener(v -> {
+//            calendar = Calendar.getInstance();
+            year = cal.get(Calendar.YEAR);
+            month = cal.get(Calendar.MONTH);
+            day = cal.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    ToDoAddActivity.this,
+                    new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+                            binding.endDateTV.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    },
+                    year, month, day);
+            datePickerDialog.show();
+        });
     }
 
     private String StartTime(int hourOfDay, int minute) {

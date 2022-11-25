@@ -8,15 +8,18 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.taskist.Database.ToDoDatabase;
+import com.example.taskist.Database.ToDoModel;
 import com.example.taskist.Listeners.ToDoMainListener;
 import com.example.taskist.R;
 import com.example.taskist.adapters.ToDoMainAdapter;
 import com.example.taskist.databinding.ActivityMainToDoBinding;
 
+import java.util.List;
+
 public class MainToDoActivity extends AppCompatActivity implements ToDoMainListener {
 
     ActivityMainToDoBinding binding;
-
+    List<ToDoModel> toDoModelList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +55,31 @@ public class MainToDoActivity extends AppCompatActivity implements ToDoMainListe
             }
             return true;
         });
+//       set the heading here
+        nextimptask();
+
     }
 
-//    ---------------- setDataToAdapter is mainly created to set data to the adapter -------------
+    private void nextimptask() {
+        toDoModelList = ToDoDatabase.getInstance(this).getToDoDao().getAllToDo();
+        if(toDoModelList.size()==0){
+            binding.impTaskTitle.setText("You don't have any task" );
+            binding.impTaskCategory.setText(" ");
+            binding.impTaskStartTime.setText(" ");
+            binding.impTaskEndTime.setText(" ");
+            binding.impTaskPriority.setText(" ");
+        }
+        else {
+            binding.impTaskTitle.setText(toDoModelList.get(0).getTitle());
+            binding.impTaskCategory.setText(toDoModelList.get(0).getCategories());
+            binding.impTaskStartTime.setText(toDoModelList.get(0).getStartTime());
+            binding.impTaskEndTime.setText(toDoModelList.get(0).getEndTime());
+            binding.impTaskPriority.setText(toDoModelList.get(0).getPriority());
+        }
+
+    }
+
+    //    ---------------- setDataToAdapter is mainly created to set data to the adapter -------------
     private void setDataToAdapter() {
         ToDoMainAdapter adapter = new ToDoMainAdapter(this, ToDoDatabase.getInstance(this).getToDoDao().getAllToDo(), MainToDoActivity.this);
         binding.countText.setText("Today you have " +adapter.getItemCount()+" task to do ");

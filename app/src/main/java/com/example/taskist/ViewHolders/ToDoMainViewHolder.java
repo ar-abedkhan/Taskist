@@ -24,12 +24,10 @@ public class ToDoMainViewHolder extends RecyclerView.ViewHolder {
         location = itemView.findViewById(R.id.todolocation);
         startTime = itemView.findViewById(R.id.starttime);
         endTime = itemView.findViewById(R.id.endingtime);
-        endTime = itemView.findViewById(R.id.endingtime);
-        endTime = itemView.findViewById(R.id.endingtime);
-        participant = itemView.findViewById(R.id.todoParticipants);
-        startdate = itemView.findViewById(R.id.startDateTV);
-        enddate = itemView.findViewById(R.id.endDateTV);
 
+        startdate = itemView.findViewById(R.id.startDate);
+        enddate = itemView.findViewById(R.id.endDateTV);
+        participant = itemView.findViewById(R.id.todoParticipants);
 
         status = itemView.findViewById(R.id.todoStatus);
         priorityImg = itemView.findViewById(R.id.todoPriorityimg);

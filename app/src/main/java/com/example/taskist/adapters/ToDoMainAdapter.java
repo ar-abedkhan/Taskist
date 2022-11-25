@@ -45,8 +45,6 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
         holder.location.setText(model.getLocation());
         holder.startTime.setText(model.getStartTime());
         holder.endTime.setText(model.getEndTime());
-        holder.startdate.setText(model.getStartdate());
-        holder.endTime.setText(model.getEnddate());
         holder.status.setChecked(model.isDone());
 
 //        if (model.getPriority().equals("High"))
