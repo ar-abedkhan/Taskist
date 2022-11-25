@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Activitys.MainNoteActivity">
 
+
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

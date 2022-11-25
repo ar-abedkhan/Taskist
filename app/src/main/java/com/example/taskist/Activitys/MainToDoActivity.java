@@ -28,10 +28,10 @@ public class MainToDoActivity extends AppCompatActivity implements ToDoMainListe
         setDataToAdapter();
 
 //---------------------------- ALl Buttons Actions --------------------------
-        binding.backBtn.setOnClickListener(view -> {
-            startActivity(new Intent(MainToDoActivity.this, MainActivity.class));
-            finish();
-        });
+//        binding.backBtn.setOnClickListener(view -> {
+//            startActivity(new Intent(MainToDoActivity.this, MainActivity.class));
+//            finish();
+//        });
 
         binding.addBtn.setOnClickListener(view -> {
             startActivity(new Intent(MainToDoActivity.this, ToDoAddActivity.class));
