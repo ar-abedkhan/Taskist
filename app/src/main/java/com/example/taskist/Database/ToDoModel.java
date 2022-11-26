@@ -11,7 +11,7 @@ public class ToDoModel {
     int id;
 
     @ColumnInfo
-    private String title, description, startTime, endTime, startdate,enddate,date, participant, location, priority, categories;
+    private String title, description, startTime, endTime, date, participant, location, priority, categories;
 
     @ColumnInfo
     private boolean isDone, isPinned;
@@ -58,22 +58,6 @@ public class ToDoModel {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
-    }
-
-    public String getStartdate() {
-        return startdate;
-    }
-
-    public void setStartdate(String startdate) {
-        this.startdate = startdate;
-    }
-
-    public String getEnddate() {
-        return enddate;
-    }
-
-    public void setEnddate(String enddate) {
-        this.enddate = enddate;
     }
 
     public String getDate() {

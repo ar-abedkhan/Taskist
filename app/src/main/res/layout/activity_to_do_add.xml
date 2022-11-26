@@ -290,6 +290,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/priorityCard"
                 >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+<!--                This is extra in the project-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -324,20 +330,7 @@
                             android:drawableRight="@drawable/time_task"
                             android:background="@drawable/edit_text_back"
                             />
-                        <TextView
-                            android:id="@+id/startDate"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/_40sdp"
-                            android:hint="Start Date"
-                            android:gravity="center"
-                            android:layout_marginTop="@dimen/_4sdp"
-                            android:layout_marginBottom="@dimen/_2sdp"
-                            android:padding="@dimen/_5sdp"
-                            android:textSize="@dimen/_11ssp"
-                            android:textColor="@color/text"
-                            android:drawableRight="@drawable/date_task"
-                            android:background="@drawable/edit_text_back"
-                            />
+
 
                     </LinearLayout>
                     <LinearLayout
@@ -368,23 +361,27 @@
                             android:drawableRight="@drawable/time_task"
                             android:background="@drawable/edit_text_back"
                             />
-                        <TextView
-                            android:id="@+id/endDateTV"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/_40sdp"
-                            android:hint="End Date"
-                            android:gravity="center"
-                            android:layout_marginTop="@dimen/_4sdp"
-                            android:layout_marginBottom="@dimen/_2sdp"
-                            android:padding="@dimen/_5sdp"
-                            android:textSize="@dimen/_11ssp"
-                            android:textColor="@color/text"
-                            android:drawableRight="@drawable/date_task"
-                            android:background="@drawable/edit_text_back"
-                            />
 
                     </LinearLayout>
 
+
+
+                </LinearLayout>
+                    <TextView
+                        android:id="@+id/addDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:hint="Date"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_margin="8dp"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/text"
+                        android:drawableRight="@drawable/date_task"
+                        android:background="@drawable/edit_text_back"
+                        />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

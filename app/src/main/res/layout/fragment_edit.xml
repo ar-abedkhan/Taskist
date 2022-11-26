@@ -165,83 +165,91 @@
                         <HorizontalScrollView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="horizontal"
                                 android:layout_marginBottom="@dimen/_10sdp"
-                                android:paddingBottom="@dimen/_8sdp"
+                                android:orientation="horizontal"
                                 android:paddingStart="@dimen/_5sdp"
                                 android:paddingEnd="@dimen/_5sdp"
-                                >
+                                android:paddingBottom="@dimen/_8sdp">
 
                                 <CheckBox
                                     android:layout_width="wrap_content"
                                     android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginHorizontal="@dimen/_2sdp"
+                                    android:background="@drawable/boeder"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingStart="@dimen/_4sdp"
+                                    android:paddingTop="@dimen/_4sdp"
+                                    android:paddingEnd="@dimen/_6sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
                                     android:text="Work"
-                                    android:paddingStart="@dimen/_4sdp"
-                                    android:paddingEnd="@dimen/_6sdp"
-                                    android:paddingTop="@dimen/_4sdp"
-                                    android:paddingBottom="@dimen/_4sdp"
-                                    android:background="@drawable/boeder"
-                                    android:paddingHorizontal="@dimen/_5sdp"
-                                    android:layout_marginHorizontal="@dimen/_2sdp"
                                     android:textColor="@color/lite_sky"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/_11ssp" />
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
                                 <CheckBox
                                     android:layout_width="wrap_content"
                                     android:layout_height="@dimen/_25sdp"
-                                    android:paddingStart="@dimen/_4sdp"
-                                    android:paddingEnd="@dimen/_6sdp"
-                                    android:paddingTop="@dimen/_4sdp"
-                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:layout_marginHorizontal="@dimen/_2sdp"
                                     android:background="@drawable/boeder"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingStart="@dimen/_4sdp"
+                                    android:paddingTop="@dimen/_4sdp"
+                                    android:paddingEnd="@dimen/_6sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
                                     android:text="Personal"
-                                    android:paddingHorizontal="@dimen/_5sdp"
-                                    android:layout_marginHorizontal="@dimen/_2sdp"
                                     android:textColor="@color/lite_sky"
-                                    android:textStyle="bold"                                    android:textSize="@dimen/_11ssp" />
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
                                 <CheckBox
                                     android:layout_width="wrap_content"
                                     android:layout_height="@dimen/_25sdp"
-                                    android:text="Shopping"
-                                    android:paddingStart="@dimen/_4sdp"
-                                    android:paddingEnd="@dimen/_6sdp"
-                                    android:paddingTop="@dimen/_4sdp"
-                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:layout_marginHorizontal="@dimen/_2sdp"
                                     android:background="@drawable/boeder"
                                     android:paddingHorizontal="@dimen/_5sdp"
-                                    android:layout_marginHorizontal="@dimen/_2sdp"
+                                    android:paddingStart="@dimen/_4sdp"
+                                    android:paddingTop="@dimen/_4sdp"
+                                    android:paddingEnd="@dimen/_6sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:text="Shopping"
                                     android:textColor="@color/lite_sky"
-                                    android:textStyle="bold"                                    android:textSize="@dimen/_11ssp" />
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
                                 <CheckBox
                                     android:layout_width="wrap_content"
                                     android:layout_height="@dimen/_25sdp"
-                                    android:paddingStart="@dimen/_4sdp"
-                                    android:paddingEnd="@dimen/_6sdp"
-                                    android:paddingTop="@dimen/_4sdp"
-                                    android:paddingBottom="@dimen/_4sdp"
-                                    android:background="@drawable/boeder"                                    android:text="Health"
-                                    android:paddingHorizontal="@dimen/_5sdp"
                                     android:layout_marginHorizontal="@dimen/_2sdp"
+                                    android:background="@drawable/boeder"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingStart="@dimen/_4sdp"
+                                    android:paddingTop="@dimen/_4sdp"
+                                    android:paddingEnd="@dimen/_6sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:text="Health"
                                     android:textColor="@color/lite_sky"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/_11ssp" />
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
                                 <CheckBox
                                     android:id="@+id/otherCateCheckBox"
                                     android:layout_width="wrap_content"
                                     android:layout_height="@dimen/_25sdp"
-                                    android:paddingStart="@dimen/_4sdp"
-                                    android:paddingEnd="@dimen/_6sdp"
-                                    android:paddingTop="@dimen/_4sdp"
-                                    android:paddingBottom="@dimen/_4sdp"
-                                    android:background="@drawable/boeder"                                    android:text="Other"
-                                    android:paddingHorizontal="@dimen/_5sdp"
                                     android:layout_marginHorizontal="@dimen/_2sdp"
+                                    android:background="@drawable/boeder"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingStart="@dimen/_4sdp"
+                                    android:paddingTop="@dimen/_4sdp"
+                                    android:paddingEnd="@dimen/_6sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:text="Other"
                                     android:textColor="@color/lite_sky"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/_11ssp" />
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
                         </HorizontalScrollView>

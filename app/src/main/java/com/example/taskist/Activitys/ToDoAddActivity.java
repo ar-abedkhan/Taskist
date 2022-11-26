@@ -37,6 +37,9 @@ public class ToDoAddActivity extends AppCompatActivity {
         binding = ActivityToDoAddBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         cal = Calendar.getInstance();
+
+        binding.Low.setChecked(true);
+
         binding.backBtn.setOnClickListener(view -> {
             startActivity(new Intent(ToDoAddActivity.this, MainToDoActivity.class));
             finish();
@@ -59,8 +62,9 @@ public class ToDoAddActivity extends AppCompatActivity {
 
         Starttime();
         Endtime();
-        Startdate();
-        Enddate();
+
+        addDate();
+//        Enddate();
 
         //insert btn
         binding.insertBtn.setOnClickListener(view -> {
@@ -99,11 +103,14 @@ public class ToDoAddActivity extends AppCompatActivity {
     private void Collectdatafromuser() {
         String Title = binding.insertTaskTitle.getText().toString();
         checkbox();
+
+        binding.Low.setChecked(true);
         radiogroup();
+
+
         String Start_time=binding.startTimeTV.getText().toString();
         String end_time=binding.endTimeTV.getText().toString();
-        String Start_date=binding.startDate.getText().toString();
-        String end_date=binding.endDateTV.getText().toString();
+        String add_date=binding.addDate.getText().toString();
         String location=  binding.locationEditText.getText().toString();
         String Desctiption=  binding.insertTaskDesctiption.getText().toString();
 
@@ -111,11 +118,11 @@ public class ToDoAddActivity extends AppCompatActivity {
         ToDoModel note =new ToDoModel();
         note.setTitle(Title);
         note.setCategories(msg);
-        note.setPriority(Priority);
+//        note.setPriority(Priority);
+        note.setPriority("High");
         note.setStartTime(Start_time);
         note.setEndTime(end_time);
-        note.setStartdate(Start_date);
-        note.setEnddate(end_date);
+        note.setDate(add_date);
         note.setParticipant(participant);
         note.setLocation(location);
         note.setDescription(Desctiption);
@@ -127,7 +134,8 @@ public class ToDoAddActivity extends AppCompatActivity {
 
 
 
-    //collect radio group
+    //collect radio group for ----- PRIORITY -----------
+
     private void radiogroup() {
 
         binding.priorityRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
@@ -206,8 +214,8 @@ public class ToDoAddActivity extends AppCompatActivity {
 
     }
 
-    private void Startdate() {
-        binding.startDate.setOnClickListener(v -> {
+    private void addDate() {
+        binding.addDate.setOnClickListener(v -> {
 
             year = cal.get(Calendar.YEAR);
             month = cal.get(Calendar.MONTH);
@@ -218,28 +226,7 @@ public class ToDoAddActivity extends AppCompatActivity {
                         @Override
                         public void onDateSet(DatePicker view, int year,
                                               int monthOfYear, int dayOfMonth) {
-                            binding.startDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-
-                        }
-                    },
-                    year, month, day);
-            datePickerDialog.show();
-        });
-    }
-
-    private void Enddate() {
-        binding.endDateTV.setOnClickListener(v -> {
-//            calendar = Calendar.getInstance();
-            year = cal.get(Calendar.YEAR);
-            month = cal.get(Calendar.MONTH);
-            day = cal.get(Calendar.DAY_OF_MONTH);
-            DatePickerDialog datePickerDialog = new DatePickerDialog(
-                    ToDoAddActivity.this,
-                    new DatePickerDialog.OnDateSetListener() {
-                        @Override
-                        public void onDateSet(DatePicker view, int year,
-                                              int monthOfYear, int dayOfMonth) {
-                            binding.endDateTV.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                            binding.addDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
                         }
                     },
