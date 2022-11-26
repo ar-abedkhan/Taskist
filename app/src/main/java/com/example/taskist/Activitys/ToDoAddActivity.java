@@ -64,7 +64,6 @@ public class ToDoAddActivity extends AppCompatActivity {
         Endtime();
 
         addDate();
-//        Enddate();
 
         //insert btn
         binding.insertBtn.setOnClickListener(view -> {

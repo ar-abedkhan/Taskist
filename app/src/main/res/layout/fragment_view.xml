@@ -241,100 +241,20 @@
                         android:text="ToDo Cetegory :"
                         />
 
-
-                    <HorizontalScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_5sdp">
-
-                        <LinearLayout
-                            android:id="@+id/todoAllCategory"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            android:padding="@dimen/_5sdp">
-
                             <TextView
-                                android:id="@+id/workCategory"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/viewCategories"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:paddingStart="4dp"
+                                android:maxLines="1"
+                                android:singleLine="true"
+
                                 android:text="Work"
                                 android:textColor="@color/lite_sky"
                                 android:textSize="@dimen/_15sdp"
                                 android:textStyle="bold" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" , "
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/healthCetagory"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Health"
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" , "
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/shoppingCetagory"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Shopping"
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" , "
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/personalCetagory"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Personal"
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" , "
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/othersCetagory"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Others"
-                                android:textColor="@color/lite_sky"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold" />
-
-
-                        </LinearLayout>
-
-                    </HorizontalScrollView>
                 </LinearLayout>
 
 
