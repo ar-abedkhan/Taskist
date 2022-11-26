@@ -44,13 +44,14 @@
         />
 
     <ImageView
+        android:id="@+id/deleteBtn"
         android:layout_weight="1"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:id="@+id/delatebtn"
+
         android:layout_gravity="center"
         android:layout_marginEnd="-40dp"
         android:background="@android:color/transparent"

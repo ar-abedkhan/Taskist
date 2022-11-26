@@ -387,15 +387,15 @@
                         android:orientation="vertical"
                         android:layout_weight="1"
                         >
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Start Time"
-                            android:textColor="@color/text_color"
-                            android:textStyle="bold"
                             android:paddingBottom="@dimen/_3sdp"
+                            android:text="End Time"
                             android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                            />
+                            android:textColor="@color/text_color"
+                            android:textStyle="bold" />
                         <EditText
                             android:background="@drawable/boeder"
                             android:gravity="center"
@@ -478,33 +478,39 @@
                                     android:orientation="vertical"
                                     android:layout_margin="@dimen/_2sdp"
                                     >
+
                                     <RadioButton
+                                        android:id="@+id/priorityHigh"
                                         android:layout_width="wrap_content"
                                         android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginHorizontal="@dimen/_5sdp"
+                                        android:paddingHorizontal="@dimen/_5sdp"
                                         android:text="High"
-                                        android:paddingHorizontal="@dimen/_5sdp"
-                                        android:layout_marginHorizontal="@dimen/_5sdp"
                                         android:textColor="@android:color/holo_green_dark"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/_11ssp"/>
+                                        android:textSize="@dimen/_11ssp"
+                                        android:textStyle="bold" />
+
                                     <RadioButton
+                                        android:id="@+id/priorityMedium"
                                         android:layout_width="wrap_content"
                                         android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginHorizontal="@dimen/_5sdp"
+                                        android:paddingHorizontal="@dimen/_5sdp"
                                         android:text="Medium"
-                                        android:paddingHorizontal="@dimen/_5sdp"
-                                        android:layout_marginHorizontal="@dimen/_5sdp"
                                         android:textColor="#F1DA0D"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/_11ssp"/>
+                                        android:textSize="@dimen/_11ssp"
+                                        android:textStyle="bold" />
+
                                     <RadioButton
+                                        android:id="@+id/priorityLow"
                                         android:layout_width="wrap_content"
                                         android:layout_height="@dimen/_25sdp"
-                                        android:text="Low"
-                                        android:paddingHorizontal="@dimen/_5sdp"
                                         android:layout_marginHorizontal="@dimen/_5sdp"
+                                        android:paddingHorizontal="@dimen/_5sdp"
+                                        android:text="Low"
                                         android:textColor="@android:color/holo_red_dark"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/_11ssp"/>
+                                        android:textSize="@dimen/_11ssp"
+                                        android:textStyle="bold" />
 
                                 </RadioGroup>
 

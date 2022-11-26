@@ -49,7 +49,7 @@ public class ViewFragment extends Fragment {
         binding.todopriority.setText(model.getPriority());
 
 //        !!!! workCategory design needs more upgrade [such as--> todoCategories] after that I will be able to code !!!!
-        binding.workCategory.setText(model.getCategories());
+        binding.viewCategories.setText(model.getCategories());
 
         binding.todolocation.setText(model.getLocation());
         binding.starttime.setText(model.getStartTime());
@@ -60,7 +60,10 @@ public class ViewFragment extends Fragment {
             binding.todoStatus.setText("Done");
         }else{ binding.todoStatus.setText("Not done");}
 
-
+        binding.deleteBtn.setOnClickListener(view -> {
+//            ******************** There will be a alert dialogue first ************************
+            ToDoDatabase.getInstance(requireContext()).getToDoDao().delete(modelList.get(0));
+        });
 
 
         return binding.getRoot();
