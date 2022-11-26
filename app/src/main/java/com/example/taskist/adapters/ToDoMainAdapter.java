@@ -49,9 +49,10 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
 
         if (model.getPriority().equals("High"))
         {holder.priorityImg.setImageResource(R.drawable.priority_high_icon);}
-        else if (model.getPriority().equals("Medium"))
+        if (model.getPriority().equals("Medium"))
         {holder.priorityImg.setImageResource(R.drawable.priority_medium_icon);}
-        else {holder.priorityImg.setImageResource(R.drawable.priority_normal_icon);}
+        if(model.getPriority().equals("Low"))
+        {holder.priorityImg.setImageResource(R.drawable.priority_normal_icon);}
 
         holder.editTodoImg.setOnClickListener(view -> {
             Intent intent = new Intent(context, TodoView.class);

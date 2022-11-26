@@ -25,8 +25,7 @@ public class ToDoMainViewHolder extends RecyclerView.ViewHolder {
         startTime = itemView.findViewById(R.id.starttime);
         endTime = itemView.findViewById(R.id.endingtime);
 
-        startdate = itemView.findViewById(R.id.startDate);
-        enddate = itemView.findViewById(R.id.endDateTV);
+        startdate = itemView.findViewById(R.id.addDate);
         participant = itemView.findViewById(R.id.todoParticipants);
 
         status = itemView.findViewById(R.id.todoStatus);

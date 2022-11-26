@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -28,8 +29,7 @@ public class ToDoAddActivity extends AppCompatActivity {
     String Priority;
     String participant;
     Calendar cal;
-    Calendar calendar;
-    int year,day,month, mHour, mMinute;
+    int year,day,month, mHour, mMinute,selectedId;
     TimePickerDialog   timePickerDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +37,6 @@ public class ToDoAddActivity extends AppCompatActivity {
         binding = ActivityToDoAddBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         cal = Calendar.getInstance();
-
-        binding.Low.setChecked(true);
 
         binding.backBtn.setOnClickListener(view -> {
             startActivity(new Intent(ToDoAddActivity.this, MainToDoActivity.class));
@@ -62,7 +60,6 @@ public class ToDoAddActivity extends AppCompatActivity {
 
         Starttime();
         Endtime();
-
         addDate();
 
         //insert btn
@@ -86,11 +83,10 @@ public class ToDoAddActivity extends AppCompatActivity {
             Toast.makeText(this, "Please enter a valid title", Toast.LENGTH_SHORT).show();
             return false;
         }
-//        else if(Priority.equalsIgnoreCase("")) {
-//            Toast.makeText(this, "Please check your Priority ", Toast.LENGTH_SHORT).show();
+//        else if() {
+//            Toast.makeText(this,"No Priority has been selected",Toast.LENGTH_SHORT).show();
 //            return false;
-//        }
-
+ //       }
         else if(binding.insertTaskDesctiption.getText().toString().equalsIgnoreCase("")) {
             Toast.makeText(this, "Please enter a valid description", Toast.LENGTH_SHORT).show();
             return false;
@@ -102,11 +98,7 @@ public class ToDoAddActivity extends AppCompatActivity {
     private void Collectdatafromuser() {
         String Title = binding.insertTaskTitle.getText().toString();
         checkbox();
-
-        binding.Low.setChecked(true);
         radiogroup();
-
-
         String Start_time=binding.startTimeTV.getText().toString();
         String end_time=binding.endTimeTV.getText().toString();
         String add_date=binding.addDate.getText().toString();
@@ -117,8 +109,7 @@ public class ToDoAddActivity extends AppCompatActivity {
         ToDoModel note =new ToDoModel();
         note.setTitle(Title);
         note.setCategories(msg);
-//        note.setPriority(Priority);
-        note.setPriority("High");
+        note.setPriority(Priority);
         note.setStartTime(Start_time);
         note.setEndTime(end_time);
         note.setDate(add_date);
@@ -136,27 +127,16 @@ public class ToDoAddActivity extends AppCompatActivity {
     //collect radio group for ----- PRIORITY -----------
 
     private void radiogroup() {
+            selectedId = binding.priorityRadioGroup.getCheckedRadioButtonId();
+            if (selectedId>-1){
 
-        binding.priorityRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-        {
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = (RadioButton)binding.priorityRadioGroup.findViewById(selectedId);
 
-                switch(checkedId){
-                    case R.id.High:
-                        Priority=  binding.High.getText().toString();
-                        break;
-                    case R.id.Medium:
-                        Priority= binding.Medium.getText().toString();
-                        break;
-                    case R.id.Low:
-                        Priority= binding.Low.getText().toString();
-                        break;
-                }
+                         Priority=radioButton.getText().toString();
 
             }
+        }
 
-        });
-    }
     private void checkbox() {
         if(binding.wrokcheckbox.isChecked()){
             msg = msg + " Wrok,";
