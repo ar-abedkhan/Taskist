@@ -52,7 +52,6 @@ public class ViewFragment extends Fragment {
         binding.tododiscription.setText(model.getDescription());
         binding.todopriority.setText(model.getPriority());
 
-//        !!!! workCategory design needs more upgrade [such as--> todoCategories] after that I will be able to code !!!!
         binding.viewCategories.setText(model.getCategories());
 
         binding.todolocation.setText(model.getLocation());
@@ -67,7 +66,7 @@ public class ViewFragment extends Fragment {
 //        ------------------------- Deleting a task ---------------------------
         binding.deleteBtn.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
-            builder.setIcon(R.drawable.priority_normal_icon);
+            builder.setIcon(R.drawable.priority_high_icon);
             builder.setTitle("Delete");
             builder.setMessage("Do you really want to delete this item?\nYou won't be able to retrieve this data");
 

@@ -105,7 +105,7 @@ public class ToDoAddActivity extends AppCompatActivity {
         String location=  binding.locationEditText.getText().toString();
         String Desctiption=  binding.insertTaskDesctiption.getText().toString();
 
-        //inser data to database
+        //insert data to database
         ToDoModel note =new ToDoModel();
         note.setTitle(Title);
         note.setCategories(msg);
@@ -116,6 +116,7 @@ public class ToDoAddActivity extends AppCompatActivity {
         note.setParticipant(participant);
         note.setLocation(location);
         note.setDescription(Desctiption);
+        note.setPinned(false);
         ToDoDatabase.getInstance(ToDoAddActivity.this).getToDoDao().insert(note);
 
 
