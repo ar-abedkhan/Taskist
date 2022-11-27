@@ -60,7 +60,8 @@ public class EditFragment extends Fragment {
         if (model.isDone()){
             binding.todoStatus.setText("Done");}
         else{
-            binding.todoStatus.setText("Not done");}
+            binding.todoStatus.setText("Not done");
+        }
 
 
         return binding.getRoot();
