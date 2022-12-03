@@ -96,16 +96,31 @@
                     android:id="@+id/todolocation"
                     />
 
+                <TextView
+                    android:id="@+id/statusTxt"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+
+                    android:text="UNDONE"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/todoStatus"/>
+
+
                 <Switch
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/todoPriorityimg"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:src="@drawable/shopping"
-                    android:text="UNDONE"
-                    android:textStyle="bold"
+
                     android:layout_marginEnd="@dimen/_25sdp"
-                    android:textColor="@android:color/holo_green_dark"
+
                     android:id="@+id/todoStatus"
                     />
 

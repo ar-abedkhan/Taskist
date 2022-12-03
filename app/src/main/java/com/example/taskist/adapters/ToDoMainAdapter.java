@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taskist.Activitys.TodoView;
+import com.example.taskist.Database.ToDoDatabase;
 import com.example.taskist.Database.ToDoModel;
 import com.example.taskist.Listeners.ToDoMainListener;
 import com.example.taskist.R;
@@ -40,7 +42,12 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
         ToDoModel model = toDoList.get(position);
 
         holder.title.setText(model.getTitle());
-        holder.categories.setText(model.getCategories());
+        if (model.getCategories().trim().endsWith(",")){
+
+            String myCategories = model.getCategories().replace(","," ");
+            holder.categories.setText(myCategories);
+        }
+
         holder.participant.setText(model.getParticipant());
         holder.location.setText(model.getLocation());
         holder.startTime.setText(model.getStartTime());
@@ -53,6 +60,27 @@ public class ToDoMainAdapter extends RecyclerView.Adapter<ToDoMainViewHolder> {
         {holder.priorityImg.setImageResource(R.drawable.priority_medium_icon);}
         if(model.getPriority().equals("Low"))
         {holder.priorityImg.setImageResource(R.drawable.priority_normal_icon);}
+
+        if (model.isDone()){
+            holder.statusTxt.setText("Done");
+        }else {
+            holder.statusTxt.setText("Undone");
+        }
+
+//        --------------- Handling TO-DO Status -----------------
+        holder.status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    holder.statusTxt.setText("Done");
+                }else {
+                    holder.statusTxt.setText("Undone");
+                }
+                model.setDone(b);
+                ToDoDatabase.getInstance(context).getToDoDao().update(model);
+                listener.screenRefresher();
+            }
+        });
 
         holder.editTodoImg.setOnClickListener(view -> {
             Intent intent = new Intent(context, TodoView.class);

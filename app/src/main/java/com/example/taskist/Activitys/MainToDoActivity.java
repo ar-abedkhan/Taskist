@@ -83,7 +83,7 @@ public class MainToDoActivity extends AppCompatActivity implements ToDoMainListe
 
     //    ---------------- setDataToAdapter is mainly created to set data to the adapter -------------
     private void setDataToAdapter() {
-        ToDoMainAdapter adapter = new ToDoMainAdapter(this, ToDoDatabase.getInstance(this).getToDoDao().getAllToDo(), MainToDoActivity.this);
+        ToDoMainAdapter adapter = new ToDoMainAdapter(this, ToDoDatabase.getInstance(this).getToDoDao().getAllToDo(), this);
         binding.countText.setText("Today you have " +adapter.getItemCount()+" task to do ");
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         binding.todayTaskRecycler.setLayoutManager(linearLayoutManager);
@@ -92,6 +92,6 @@ public class MainToDoActivity extends AppCompatActivity implements ToDoMainListe
 
     @Override
     public void screenRefresher() {
-
+        setDataToAdapter();
     }
 }
