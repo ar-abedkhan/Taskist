@@ -57,6 +57,8 @@ public class ViewFragment extends Fragment {
         binding.todolocation.setText(model.getLocation());
         binding.starttime.setText(model.getStartTime());
         binding.endtime.setText(model.getEndTime());
+        binding.viewDate.setText(model.getDate());
+
         binding.participantName.setText(model.getParticipant());
 
         if (model.isDone()){

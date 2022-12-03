@@ -62,6 +62,7 @@ public class MainToDoActivity extends AppCompatActivity implements ToDoMainListe
 
     }
 
+//    ---TODO: This part should be updated according to the done and undone status
     private void nextimptask() {
         toDoModelList = ToDoDatabase.getInstance(this).getToDoDao().getAllToDo();
         if(toDoModelList.size()==0){

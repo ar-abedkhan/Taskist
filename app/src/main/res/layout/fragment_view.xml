@@ -333,6 +333,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2"
                 android:layout_margin="@dimen/_5sdp"
@@ -412,6 +416,25 @@
 
                 </LinearLayout>
 
+
+            </LinearLayout>
+
+                <TextView
+                    android:background="@drawable/boeder"
+                    android:gravity="center"
+                    android:id="@+id/viewDate"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:inputType="time"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DD-MM-YYYY"
+                    android:textColor="@color/lite_sky"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    />
 
             </LinearLayout>
 
