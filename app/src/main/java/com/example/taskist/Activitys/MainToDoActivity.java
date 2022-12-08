@@ -48,8 +48,9 @@ public class MainToDoActivity extends AppCompatActivity implements ToDoMainListe
 
             switch (item.getItemId()){
                 case R.id.bottomHome:
-
-                    Toast.makeText(this, "Home Clicked", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainToDoActivity.this, statusActivity.class));
+                    finish();
+//                    Toast.makeText(this, "Home Clicked", Toast.LENGTH_SHORT).show();
                     break;
 
                 case R.id.bottomAll:

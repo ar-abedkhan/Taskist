@@ -6,6 +6,7 @@
     <string name="note">Note</string>
     <string name="list">Make List</string>
     <string name="all_list">All Taks List</string>
+    <string name="status_list">Todo Status</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

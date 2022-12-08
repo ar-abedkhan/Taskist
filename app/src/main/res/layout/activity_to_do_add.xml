@@ -135,6 +135,7 @@
                                 android:background="@drawable/boeder"
                                 android:paddingHorizontal="@dimen/_5sdp"
                                 android:paddingStart="@dimen/_4sdp"
+                                android:shadowColor="@color/lite_sky"
                                 android:paddingTop="@dimen/_4sdp"
                                 android:paddingEnd="@dimen/_6sdp"
                                 android:paddingBottom="@dimen/_4sdp"
@@ -447,7 +448,10 @@
 
 
                 </LinearLayout>
+
+
                     <TextView
+                        android:layout_weight="1"
                         android:id="@+id/addDate"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
@@ -462,6 +466,8 @@
                         android:drawableRight="@drawable/date_task"
                         android:background="@drawable/edit_text_back"
                         />
+
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -528,6 +534,9 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/locationCard"
                 android:layout_width="match_parent"
@@ -567,6 +576,57 @@
                         android:textSize="@dimen/_10ssp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/favouriteCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationCard"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/insertTaskFavourite"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Make it favourite"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/text_color"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/candal"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/descriptionCard"
                 android:layout_width="match_parent"
@@ -576,7 +636,7 @@
                 app:cardCornerRadius="@dimen/_8sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/locationCard"
+                app:layout_constraintTop_toBottomOf="@id/favouriteCard"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
