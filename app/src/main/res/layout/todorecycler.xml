@@ -7,6 +7,7 @@
     android:layout_margin="5dp"
     android:elevation="12dp"
     android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,7 +42,9 @@
                     android:ellipsize="marquee"
                     android:textStyle="bold"
                     android:textSize="25sp"
-                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="2dp"
                     android:id="@+id/todoTitle"
                     />
 
@@ -80,7 +83,7 @@
                     android:layout_height="30dp"
                     android:src="@drawable/ic_baseline_location_on_24"
                     android:id="@+id/todolocationimg"
-                    android:paddingEnd="5dp"
+                    android:paddingEnd="3dp"
                     />
 
                 <TextView
@@ -125,15 +128,15 @@
                     />
 
 
-                <ImageView
-                    android:id="@+id/edittodo"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/edit"
-                    android:padding="@dimen/_2sdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
+<!--                <ImageView-->
+<!--                    android:id="@+id/edittodo"-->
+<!--                    android:layout_width="@dimen/_25sdp"-->
+<!--                    android:layout_height="@dimen/_25sdp"-->
+<!--                    android:src="@drawable/edit"-->
+<!--                    android:padding="@dimen/_2sdp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -146,7 +149,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingTop="@dimen/_1sdp"
+            android:paddingBottom="@dimen/_1sdp"
             >
 
 
@@ -201,9 +206,11 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="17dp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableStart="@drawable/ic_baseline_group_add_24"
                 android:layout_height="wrap_content"
                 android:text="Participants"
                 android:id="@+id/todoParticipants"

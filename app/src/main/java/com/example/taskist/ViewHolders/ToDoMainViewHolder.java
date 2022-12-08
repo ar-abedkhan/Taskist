@@ -31,6 +31,5 @@ public class ToDoMainViewHolder extends RecyclerView.ViewHolder {
 
         status = itemView.findViewById(R.id.todoStatus);
         priorityImg = itemView.findViewById(R.id.todoPriorityimg);
-        editTodoImg = itemView.findViewById(R.id.edittodo);
     }
 }

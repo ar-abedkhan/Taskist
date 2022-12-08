@@ -3,18 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Taskist/app/src/main/res/drawable-v24/toolbak.xml" value="0.16" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/add_btn_back.xml" value="0.2275" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/back.xml" value="0.2275" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/boeder.xml" value="0.2275" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/buttonback.xml" value="0.217" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/checkbox_back.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/done.xml" value="0.16" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/edit_text_back.xml" value="0.2425" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/home.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/ic_baseline_group_add_24.xml" value="0.16" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.2425" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.217" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/insert_btn_back.xml" value="0.2425" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/locationtask.xml" value="0.16" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/notdone.xml" value="0.16" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/others.xml" value="0.16" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/pin.xml" value="0.16" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/shopping.xml" value="0.2425" />
         <entry key="..\:/Taskist/app/src/main/res/drawable/start_btn_back.xml" value="0.217" />
+        <entry key="..\:/Taskist/app/src/main/res/drawable/time_task.xml" value="0.16" />
         <entry key="..\:/Taskist/app/src/main/res/layout/activity_all_list.xml" value="0.23645833333333333" />
         <entry key="..\:/Taskist/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
         <entry key="..\:/Taskist/app/src/main/res/layout/activity_main_list.xml" value="0.23645833333333333" />

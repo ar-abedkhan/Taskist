@@ -25,10 +25,13 @@
                 android:id="@+id/cetagoryTabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:tabIndicatorAnimationMode="linear"
+                app:tabMode="scrollable"
+
                 android:background="@color/lite_sky"
-                android:paddingBottom="@dimen/_1sdp"
-                app:tabIndicatorColor="@color/white"
-                app:tabSelectedTextColor="@color/red"
+                app:tabBackground="@drawable/toolbak"
+                app:tabIndicatorColor="@color/lite_sky"
+                app:tabSelectedTextColor="@color/lite_sky"
                 app:tabTextColor="@color/black"
 
                 />

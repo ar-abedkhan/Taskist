@@ -42,6 +42,7 @@
         app:tabIndicatorColor="@color/white"
         app:tabIndicatorHeight="@dimen/_2sdp"
         android:paddingBottom="@dimen/_1sdp"
+
         app:tabIconTint="@color/tab_color"
         app:tabSelectedTextColor="@color/black"
         app:tabTextColor="@color/white"
