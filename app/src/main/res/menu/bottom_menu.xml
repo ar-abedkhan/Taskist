@@ -4,7 +4,9 @@
 
     <item
         android:id="@+id/bottomHome"
-        android:icon="@drawable/home"
+        android:icon="@drawable/ic_baseline_remove_done_24"
+        android:title="Status"
+
         app:showAsAction="always"
         />
     <item
@@ -16,6 +18,7 @@
     <item
         android:id="@+id/bottomAll"
         android:icon="@drawable/alllist"
+        android:title="All List"
         app:showAsAction="always"
         />
 

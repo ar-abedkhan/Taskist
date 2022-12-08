@@ -110,66 +110,151 @@
                             android:layout_height="match_parent"
                             android:orientation="horizontal"
                             android:layout_marginBottom="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_7sdp"
                             >
+
+<!--                            <CheckBox-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="@dimen/_25sdp"-->
+<!--                                android:layout_marginHorizontal="@dimen/_2sdp"-->
+<!--                                android:background="@drawable/checkbox_back"-->
+<!--                                android:fontFamily="@font/sen_bold"-->
+<!--                                android:paddingHorizontal="@dimen/_5sdp"-->
+<!--                                android:text="Work"-->
+<!--                                android:textColor="@color/text"-->
+<!--                                android:textSize="@dimen/_11ssp" />-->
+
+
+
 
                             <CheckBox
                                 android:id="@+id/wrokcheckbox"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_2sdp"
-                                android:background="@drawable/checkbox_back"
-                                android:fontFamily="@font/sen_bold"
+                                android:background="@drawable/boeder"
                                 android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_4sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:paddingEnd="@dimen/_6sdp"
+                                android:paddingBottom="@dimen/_4sdp"
                                 android:text="Work"
-                                android:textColor="@color/text"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textColor="@color/lite_sky"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+
 
                             <CheckBox
                                 android:id="@+id/personalcheckbox"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_2sdp"
-                                android:background="@drawable/checkbox_back"
-                                android:fontFamily="@font/sen_bold"
+                                android:background="@drawable/boeder"
                                 android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_4sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:paddingEnd="@dimen/_6sdp"
+                                android:paddingBottom="@dimen/_4sdp"
                                 android:text="Personal"
-                                android:textColor="@color/text"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textColor="@color/lite_sky"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
 
                             <CheckBox
                                 android:id="@+id/shoppingcheckbox"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_2sdp"
-                                android:background="@drawable/checkbox_back"
-                                android:fontFamily="@font/sen_bold"
+                                android:background="@drawable/boeder"
                                 android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_4sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:paddingEnd="@dimen/_6sdp"
+                                android:paddingBottom="@dimen/_4sdp"
                                 android:text="Shopping"
-                                android:textColor="@color/text"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textColor="@color/lite_sky"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
 
                             <CheckBox
                                 android:id="@+id/healthcheckbox"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_2sdp"
-                                android:background="@drawable/checkbox_back"
-                                android:fontFamily="@font/sen_bold"
+                                android:background="@drawable/boeder"
                                 android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_4sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:paddingEnd="@dimen/_6sdp"
+                                android:paddingBottom="@dimen/_4sdp"
                                 android:text="Health"
-                                android:textColor="@color/text"
-                                android:textSize="@dimen/_11ssp" />
+                                android:textColor="@color/lite_sky"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
                             <CheckBox
                                 android:id="@+id/otherCateCheckBox"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
-                                android:fontFamily="@font/sen_bold"
-                                android:text="Other"
-                                android:background="@drawable/checkbox_back"
-                                android:paddingHorizontal="@dimen/_5sdp"
                                 android:layout_marginHorizontal="@dimen/_2sdp"
-                                android:textColor="@color/text"
-                                android:textSize="@dimen/_11ssp" />
+                                android:background="@drawable/boeder"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_4sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:paddingEnd="@dimen/_6sdp"
+                                android:paddingBottom="@dimen/_4sdp"
+                                android:text="Other"
+                                android:textColor="@color/lite_sky"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+
+<!--                            <CheckBox-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="@dimen/_25sdp"-->
+<!--                                android:layout_marginHorizontal="@dimen/_2sdp"-->
+<!--                                android:background="@drawable/checkbox_back"-->
+<!--                                android:fontFamily="@font/sen_bold"-->
+<!--                                android:paddingHorizontal="@dimen/_5sdp"-->
+<!--                                android:text="Personal"-->
+<!--                                android:textColor="@color/text"-->
+<!--                                android:textSize="@dimen/_11ssp" />-->
+
+<!--                            <CheckBox-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="@dimen/_25sdp"-->
+<!--                                android:layout_marginHorizontal="@dimen/_2sdp"-->
+<!--                                android:background="@drawable/checkbox_back"-->
+<!--                                android:fontFamily="@font/sen_bold"-->
+<!--                                android:paddingHorizontal="@dimen/_5sdp"-->
+<!--                                android:text="Shopping"-->
+<!--                                android:textColor="@color/text"-->
+<!--                                android:textSize="@dimen/_11ssp" />-->
+
+<!--                            <CheckBox-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="@dimen/_25sdp"-->
+<!--                                android:layout_marginHorizontal="@dimen/_2sdp"-->
+<!--                                android:background="@drawable/checkbox_back"-->
+<!--                                android:fontFamily="@font/sen_bold"-->
+<!--                                android:paddingHorizontal="@dimen/_5sdp"-->
+<!--                                android:text="Health"-->
+<!--                                android:textColor="@color/text"-->
+<!--                                android:textSize="@dimen/_11ssp" />-->
+<!--                            -->
+<!--                            -->
+<!--                            <CheckBox-->
+<!--                                android:id="@+id/otherCateCheckBox"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="@dimen/_25sdp"-->
+<!--                                android:fontFamily="@font/sen_bold"-->
+<!--                                android:text="Other"-->
+<!--                                android:background="@drawable/checkbox_back"-->
+<!--                                android:paddingHorizontal="@dimen/_5sdp"-->
+<!--                                android:layout_marginHorizontal="@dimen/_2sdp"-->
+<!--                                android:textColor="@color/text"-->
+<!--                                android:textSize="@dimen/_11ssp" />-->
 
                         </LinearLayout>
                     </HorizontalScrollView>
@@ -237,12 +322,11 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:background="@drawable/checkbox_back"
                                 android:backgroundTint="@color/green"
                                 android:fontFamily="@font/sen_bold"
                                 android:paddingHorizontal="@dimen/_5sdp"
                                 android:text="High"
-                                android:textColor="@color/text"
+                                android:textColor="@android:color/holo_green_dark"
                                 android:textSize="@dimen/_11ssp" />
 
                             <RadioButton
@@ -250,12 +334,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:background="@drawable/checkbox_back"
-                                android:backgroundTint="@color/yellow"
+                                android:textColor="@color/yellow"
                                 android:fontFamily="@font/sen_bold"
                                 android:paddingHorizontal="@dimen/_5sdp"
                                 android:text="Medium"
-                                android:textColor="@color/text"
                                 android:textSize="@dimen/_11ssp" />
 
                             <RadioButton
@@ -263,12 +345,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_25sdp"
                                 android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:background="@drawable/checkbox_back"
-                                android:backgroundTint="@color/hot_pink"
                                 android:fontFamily="@font/sen_bold"
                                 android:paddingHorizontal="@dimen/_5sdp"
                                 android:text="Low"
-                                android:textColor="@color/text"
+                                android:textColor="@android:color/holo_red_dark"
                                 android:textSize="@dimen/_11ssp" />
 
                         </RadioGroup>
