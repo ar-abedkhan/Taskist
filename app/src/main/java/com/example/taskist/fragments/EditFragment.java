@@ -197,7 +197,8 @@ public class EditFragment extends Fragment {
 
                         // TODO: 11/27/2022  .... Category problem is not solved yet!
                         if (myCategories.equals("")){
-                            myCategories = "Personal";
+//                            myCategories = "Personal";
+                            myCategories = model.getCategories();
                         }
 //                        else{
 //                            //--------TODO: get data to the "myCategories"
